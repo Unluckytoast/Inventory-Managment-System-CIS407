@@ -1,5 +1,5 @@
-package main.java.com.inventory.controller;
+package com.inventory.controller;
 
 public class CustomerController {
-    
+
 }
