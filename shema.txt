@@ -1,0 +1,85 @@
+inventory-management-system/
+│
+├── backend/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/inventory/
+│   │   │   │   ├── controller/
+│   │   │   │   │   ├── CustomerController.java
+│   │   │   │   │   ├── ProductController.java
+│   │   │   │   │   ├── SupplierController.java
+│   │   │   │   │   ├── OrderController.java
+│   │   │   │   │   └── PurchaseOrderController.java
+│   │   │   │   │
+│   │   │   │   ├── service/
+│   │   │   │   │   ├── StockService.java          # Stock updates, auto-reorder logic
+│   │   │   │   │   └── OrderService.java          # Insert orders + reduce stock
+│   │   │   │   │
+│   │   │   │   ├── repository/
+│   │   │   │   │   ├── CustomerRepository.java
+│   │   │   │   │   ├── ProductRepository.java
+│   │   │   │   │   ├── SupplierRepository.java
+│   │   │   │   │   ├── OrderRepository.java
+│   │   │   │   │   └── PurchaseOrderRepository.java
+│   │   │   │   │
+│   │   │   │   ├── model/
+│   │   │   │   │   ├── Customer.java
+│   │   │   │   │   ├── Product.java
+│   │   │   │   │   ├── Supplier.java
+│   │   │   │   │   ├── Order.java
+│   │   │   │   │   ├── OrderItem.java
+│   │   │   │   │   ├── Stock.java
+│   │   │   │   │   ├── PurchaseOrder.java
+│   │   │   │   │   └── PurchaseOrderItem.java
+│   │   │   │   │
+│   │   │   │   ├── config/
+│   │   │   │   │   └── SQLiteDBConfig.java        # JDBC connection to .sqlite file
+│   │   │   │   │
+│   │   │   │   └── InventoryManagementApplication.java
+│   │   │   │
+│   │   │   └── resources/
+│   │   │       ├── application.properties         # path to .sqlite file
+│   │   │       ├── schema.sql                     # CREATE TABLE statements
+│   │   │       ├── seed.sql                       # Optional seed data
+│   │   │       └── triggers.sql                   # Optional triggers
+│   │   │
+│   │   └── test/java/com/inventory/ (optional)
+│   │
+│   ├── pom.xml                                    # Maven file
+│   └── README.md
+│
+├── database/
+│   ├── inventory.sqlite                            # SQLite database file
+│   ├── ERD.pdf                                     # Your ER diagram
+│   ├── schema.sql
+│   └── seed.sql
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── ProductTable.jsx
+│   │   │   ├── StockDashboard.jsx
+│   │   │   ├── CustomerOrderForm.jsx
+│   │   │   ├── SupplierView.jsx
+│   │   │   └── PurchaseOrdersPage.jsx
+│   │   │
+│   │   ├── services/
+│   │   │   ├── api.js                              # Axios wrapper
+│   │   │   ├── productService.js
+│   │   │   ├── orderService.js
+│   │   │   └── stockService.js
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Inventory.jsx
+│   │   │   ├── Orders.jsx
+│   │   │   └── Suppliers.jsx
+│   │   │
+│   │   ├── App.jsx
+│   │   └── index.js
+│   │
+│   ├── package.json
+│   └── README.md
+│
+└── README.md                                         # Root project readme
