@@ -19,7 +19,7 @@ public class ProductController {
     }
 
     @PostMapping
-    public ResponseEntity<Product> addProduct(@RequestBody Product p) {
+    public ResponseEntity<Product> addProduct(@org.springframework.validation.annotation.Validated @jakarta.validation.Valid @RequestBody Product p) {
         Product saved = productService.addOrUpdate(p);
         return ResponseEntity.ok(saved);
     }

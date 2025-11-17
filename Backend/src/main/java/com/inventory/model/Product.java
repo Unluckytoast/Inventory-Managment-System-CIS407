@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "products")
@@ -16,6 +17,7 @@ public class Product {
     public Long id;
 
     public String sku;
+    @NotBlank
     public String name;
     public String description;
 

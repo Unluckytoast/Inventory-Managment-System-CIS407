@@ -10,12 +10,10 @@ import org.hibernate.dialect.identity.IdentityColumnSupport;
  */
 public class SQLiteDialect extends Dialect {
 
-    public SQLiteDialect() {
+    /*public SQLiteDialect() {
         super();
-        // Intentionally left minimal: avoid direct registerColumnType calls
-        // which vary across Hibernate versions.
     }
-
+    */
     public boolean supportsIdentityColumns() {
         return true;
     }

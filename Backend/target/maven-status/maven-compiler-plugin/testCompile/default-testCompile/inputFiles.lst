@@ -1,3 +1,9 @@
+C:\Database Class projects\Inventory-Managment-System-CIS407\Backend\src\test\java\com\inventory\performance\PerformanceSanityTests.java
+C:\Database Class projects\Inventory-Managment-System-CIS407\Backend\src\test\java\com\inventory\controller\OrderControllerIntegrationTests.java
+C:\Database Class projects\Inventory-Managment-System-CIS407\Backend\src\test\java\com\inventory\controller\OrderValidationIntegrationTests.java
 C:\Database Class projects\Inventory-Managment-System-CIS407\Backend\src\test\java\com\inventory\repository\ProductRepositoryTests.java
 C:\Database Class projects\Inventory-Managment-System-CIS407\Backend\src\test\java\com\inventory\repository\SupplierRepositoryTests.java
+C:\Database Class projects\Inventory-Managment-System-CIS407\Backend\src\test\java\com\inventory\repository\PurchaseOrderRepositoryTests.java
+C:\Database Class projects\Inventory-Managment-System-CIS407\Backend\src\test\java\com\inventory\service\StockServiceTests.java
+C:\Database Class projects\Inventory-Managment-System-CIS407\Backend\src\test\java\com\inventory\repository\ConstraintRepositoryTests.java
 C:\Database Class projects\Inventory-Managment-System-CIS407\Backend\src\test\java\com\inventory\repository\CustomerRepositoryTests.java

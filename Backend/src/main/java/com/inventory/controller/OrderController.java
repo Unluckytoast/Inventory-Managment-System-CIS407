@@ -19,9 +19,20 @@ public class OrderController {
     }
 
     @PostMapping
-    public ResponseEntity<Order> createOrder(@RequestBody Order o) {
+    public ResponseEntity<Long> createOrder(@RequestBody Order o) {
+        // basic validation on items
+        if (o.items != null) {
+            for (var it : o.items) {
+                if (it.product == null || it.product.id == null) {
+                    throw new IllegalArgumentException("Missing product id in order item");
+                }
+                if (it.quantity == null || it.quantity <= 0) {
+                    throw new IllegalArgumentException("Invalid quantity in order item");
+                }
+            }
+        }
         Order saved = orderService.createOrder(o);
-        return ResponseEntity.ok(saved);
+        return ResponseEntity.ok(saved.id);
     }
 }
  
