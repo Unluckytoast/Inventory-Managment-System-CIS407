@@ -1,0 +1,38 @@
+CREATE TABLE Suppliers (
+    SupplierID INT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Price DOUBLE(10,2) NOT NULL,
+    SupplierID INT REFERENCES Suppliers(SupplierID)
+);
+
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL
+);
+
+--Changes: Added order date
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    Address VARCHAR(255) NOT NULL,
+    OrderDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CustomerID INT REFERENCES Customers(CustomerID)
+);
+
+--New table: Allows multi-item orders; before order was tied to product directly
+CREATE TABLE OrderItems (
+    OrderItemID INT PRIMARY KEY,
+    OrderID INT REFERENCES Orders(OrderID),
+    ProductID INT REFERENCES Products(ProductID),
+    Quantity INT NOT NULL
+);
+
+CREATE TABLE Stock (
+    StockID INT PRIMARY KEY,
+    ProductID INT REFERENCES Products(ProductID),
+    Stock INT NOT NULL
+);

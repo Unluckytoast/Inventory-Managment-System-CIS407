@@ -1,0 +1,154 @@
+.navigation {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid #2A5490;
+}
+
+.nav-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.nav-brand:hover {
+    transform: scale(1.05);
+}
+
+.brand-icon {
+    font-size: 28px;
+}
+
+.brand-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2A5490;
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid #2A5490;
+    color: #2A5490;
+    font-size: 24px;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 5px;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    color: #333;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background: #f0f0f0;
+    color: #2A5490;
+}
+
+.nav-item.active {
+    background: #2A5490;
+    color: white;
+    font-weight: 600;
+}
+
+.nav-icon {
+    font-size: 18px;
+}
+
+.nav-title {
+    white-space: nowrap;
+}
+
+.nav-current {
+    color: #2A5490;
+    font-weight: 600;
+    font-size: 16px;
+    min-width: 150px;
+    text-align: right;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .nav-menu {
+        gap: 2px;
+    }
+    
+    .nav-item {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .nav-icon {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        flex-direction: column;
+        padding: 10px 20px;
+        gap: 5px;
+        display: none;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-item {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .nav-current {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-text {
+        display: none;
+    }
+    
+    .nav-container {
+        padding: 10px 15px;
+    }
+}
