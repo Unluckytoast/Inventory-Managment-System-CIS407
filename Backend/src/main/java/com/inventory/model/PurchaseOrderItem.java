@@ -1,5 +1,7 @@
 package com.inventory.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,6 +19,7 @@ public class PurchaseOrderItem {
 
     @ManyToOne
     @JoinColumn(name = "purchase_order_id")
+    @JsonIgnore
     public PurchaseOrder purchaseOrder;
 
     @ManyToOne

@@ -1,0 +1,9 @@
+com\inventory\repository\PurchaseOrderRepositoryTests.class
+com\inventory\repository\ConstraintRepositoryTests.class
+com\inventory\repository\SupplierRepositoryTests.class
+com\inventory\repository\ProductRepositoryTests.class
+com\inventory\controller\OrderValidationIntegrationTests.class
+com\inventory\repository\CustomerRepositoryTests.class
+com\inventory\performance\PerformanceSanityTests.class
+com\inventory\service\StockServiceTests.class
+com\inventory\controller\OrderControllerIntegrationTests.class

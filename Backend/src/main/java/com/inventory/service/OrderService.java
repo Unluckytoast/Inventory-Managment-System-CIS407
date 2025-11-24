@@ -5,9 +5,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.inventory.model.Order;
 import com.inventory.model.OrderItem;
+import com.inventory.repository.CustomerRepository;
 import com.inventory.repository.OrderRepository;
 import com.inventory.repository.StockRepository;
-import com.inventory.repository.CustomerRepository;
 
 @Service
 public class OrderService {
@@ -31,9 +31,15 @@ public class OrderService {
                 stockService.reduceStock(it.product.id, it.quantity == null ? 0 : it.quantity);
             }
         }
-        // validate customer exists if provided
-        if (o.customer != null && o.customer.id != null) {
-            customerRepository.findById(o.customer.id).orElseThrow();
+        // handle customer - create if no ID, validate if ID provided
+        if (o.customer != null) {
+            if (o.customer.id == null) {
+                // New customer - save it first
+                o.customer = customerRepository.save(o.customer);
+            } else {
+                // Existing customer - validate it exists
+                customerRepository.findById(o.customer.id).orElseThrow();
+            }
         }
         o.orderDate = java.time.LocalDateTime.now();
         o.status = "PLACED";

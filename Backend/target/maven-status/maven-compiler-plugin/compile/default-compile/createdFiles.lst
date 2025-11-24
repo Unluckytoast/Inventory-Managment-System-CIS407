@@ -12,6 +12,7 @@ com\inventory\controller\ProductController.class
 com\inventory\controller\SupplierController.class
 com\inventory\model\Order.class
 com\inventory\repository\StockRepository.class
+com\inventory\service\CustomerService.class
 com\inventory\model\OrderItem.class
 com\inventory\service\OrderService.class
 com\inventory\service\ProductService.class
@@ -19,9 +20,13 @@ com\inventory\repository\SupplierRepository.class
 com\inventory\model\Product.class
 com\inventory\model\Customer.class
 com\inventory\repository\PurchaseOrderRepository.class
+com\inventory\controller\CustomerController$LoginRequest.class
+com\inventory\controller\StockController$StockUpdateRequest.class
 com\inventory\repository\OrderItemRepository.class
 com\inventory\model\PurchaseOrderItem.class
 com\inventory\repository\CustomerRepository.class
+com\inventory\controller\StockController.class
 com\inventory\config\SQLiteDBConfig.class
+com\inventory\controller\GlobalExceptionHandler.class
 com\inventory\controller\OrderController.class
 com\inventory\InventoryManagementApplication.class
