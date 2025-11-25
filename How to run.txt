@@ -1,0 +1,6 @@
+How to start backend
+mvn -DskipTests spring-boot:run
+
+How to start frontend
+npm install
+npm start
